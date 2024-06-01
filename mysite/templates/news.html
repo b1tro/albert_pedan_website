@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+<h1 style=" text-align: center; font-size: 30px; margin-top: 30px; margin-bottom: 30px; margin-right: 0px">{{title}}</h1>
+<div style=" border: solid cornflowerblue 3px; background-color: powderblue; padding-top: 50px; padding-bottom: 100px">
+    <div style="display:flex;margin: auto;flex-direction: row;flex-wrap: wrap; justify-content: center;">
+        {% for new in news %}
+        <div class ="text" style ="margin: 10px; width: 500px; font-size: 20px; font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace; border: solid cornflowerblue 3px; padding: 5px; background-color: lightcyan">
+            <h3 style="text-align: center; font-weight: bold; font-size: 22px">{{new.title}}</h3>
+            <br>
+            <p>{{new.content}}</p>
+            <br>
+            <p>Опубликовано: {{new.date_posted}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+

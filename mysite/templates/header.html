@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="{% static 'css/style.css'%}">
+	<title>{% block title %} {{page_name}} {% endblock %}</title>
+</head>
+<body>
+<ul>
+	<li>
+		<a href="http://127.0.0.1:8000/news/">
+			<i class="ai-home"></i>
+			<span>Главная</span>
+		</a>
+	</li>
+	<li>
+		<a href="http://127.0.0.1:8000/news/news/">
+			<i class="ai-file"></i>
+			<span>Новости</span>
+		</a>
+	</li>
+	<li>
+		<a href="http://127.0.0.1:8000/news/about/">
+			<i class="ai-book-open"></i>
+			<span>О нас</span>
+		</a>
+	</li>
+	<li class="logo">
+		<span>МКУ города Казань</span>
+	</li>
+</ul>
+  <script src='https://unpkg.com/akar-icons-fonts'></script>
+<script  src="{% static 'js/header.js'%}"></script>
+
+</body>
+</html>
